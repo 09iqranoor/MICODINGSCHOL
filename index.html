@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Coding School — Learn Skills. Build Projects. Shape Your Future.</title>
+<meta name="description" content="Mi Coding School is an online IT academy offering live online courses in web development, Python, and digital marketing — with real projects, expert instructors, and certificates.">
+<meta name="keywords" content="online coding academy, learn to code online, live online classes, web development course, python course, digital marketing course,Devops course, wordpress course">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Mi Coding School — Online IT Academy">
+<meta property="og:description" content="Learn practical technology skills through live online classes, real projects and expert instructor support.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/logo.jpeg">
+
+<link rel="icon" type="image/jpeg" href="images/logo.jpeg">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+
+<!-- Tailwind CSS (CDN) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#0B0B0D',
+          panel: '#141416',
+          panel2: '#1B1B1E',
+          paper: '#F5F5F2',
+          crimson: '#9E1B32',
+          crimsonBright: '#C81E3E',
+          smoke: '#8A8A90',
+          hair: '#2A2A2E',
+        },
+        fontFamily: {
+          display: ['"Space Grotesk"', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+          mono: ['"JetBrains Mono"', 'monospace'],
+        },
+      }
+    }
+  }
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-ink text-paper font-body antialiased">
+
+<!-- ============ SKIP LINK (a11y) ============ -->
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- ============ NAVBAR ============ -->
+<header id="navbar" class="fixed top-0 inset-x-0 z-50 border-b border-hair/0 transition-all duration-300">
+  <nav class="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-20" aria-label="Main navigation">
+    <a href="#home" class="flex items-center gap-3 shrink-0" aria-label="Mi Coding School — Home">
+      <img src="images/logo.jpeg" alt="Mi Coding School logo" class="h-11 w-11 object-cover rounded-md">
+      <span class="font-display font-semibold text-lg tracking-tight hidden sm:block">Mi Coding <span class="text-crimsonBright">School</span></span>
+    </a>
+
+    <ul class="hidden lg:flex items-center gap-8 font-medium text-sm text-paper/80">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#courses" class="nav-link">Courses</a></li>
+      <li><a href="#faculty" class="nav-link">Faculty</a></li>
+      <li><a href="#testimonials" class="nav-link">Student Reviews</a></li>
+      <li><a href="#video-feedback" class="nav-link">Video Feedback</a></li>
+      <li><a href="#faq" class="nav-link">FAQ</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <div class="hidden lg:block">
+      <button data-open-register class="btn-primary">Enroll Now</button>
+    </div>
+
+    <button id="menuToggle" class="lg:hidden relative w-10 h-10 flex items-center justify-center" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span class="hamburger"><span></span><span></span><span></span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="lg:hidden max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-panel border-t border-hair">
+    <ul class="flex flex-col px-6 py-4 gap-1 font-medium text-paper/90">
+      <li><a href="#home" class="mobile-link">Home</a></li>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#courses" class="mobile-link">Courses</a></li>
+      <li><a href="#faculty" class="mobile-link">Faculty</a></li>
+      <li><a href="#testimonials" class="mobile-link">Student Reviews</a></li>
+      <li><a href="#video-feedback" class="mobile-link">Video Feedback</a></li>
+      <li><a href="#faq" class="mobile-link">FAQ</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+      <li class="pt-3"><button data-open-register class="btn-primary w-full">Enroll Now</button></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section id="home" class="relative pt-40 pb-24 md:pt-48 md:pb-32 overflow-hidden">
+    <div class="absolute inset-0 hero-grid pointer-events-none"></div>
+    <div class="absolute -top-32 -right-32 w-[520px] h-[520px] bg-crimson/25 blur-[140px] rounded-full pointer-events-none"></div>
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+
+    <div class="max-w-7xl mx-auto px-5 md:px-8 relative grid lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <p class="eyebrow mb-6" data-hero-in="1"><span class="cursor-dot"></span>ONLINE IT ACADEMY</p>
+        <h1 class="font-display font-semibold text-4xl sm:text-5xl md:text-6xl leading-[1.08] tracking-tight" data-hero-in="2">
+          Learn Skills.<br>Build Projects.<br><span class="text-crimsonBright">Shape Your Future.</span>
+        </h1>
+        <p class="mt-6 text-lg text-paper/70 max-w-lg" data-hero-in="3">
+          Mi Coding School provides live, practical, career-focused technology education — delivered online, taught by working professionals, built around real projects.
+        </p>
+        <div class="mt-9 flex flex-wrap gap-4" data-hero-in="4">
+          <a href="#courses" class="btn-primary">Explore Courses <span class="btn-arrow">→</span></a>
+          <button data-open-register class="btn-ghost">Enroll Now</button>
+        </div>
+        <div class="mt-12 flex gap-10 font-mono text-sm" data-hero-in="5">
+          <div><span class="counter font-display text-2xl text-crimsonBright font-semibold" data-count="100">0</span><span class="text-paper/50">+ Students</span></div>
+          <div><span class="counter font-display text-2xl text-crimsonBright font-semibold" data-count="4">0</span><span class="text-paper/50"> Live Courses</span></div>
+          <div><span class="counter font-display text-2xl text-crimsonBright font-semibold" data-count="100">0</span><span class="text-paper/50">% Satisfaction</span></div>
+        </div>
+      </div>
+
+      <!-- Code-editor style illustration (signature element) -->
+      <div class="relative" data-hero-in="3">
+        <div class="editor-window">
+          <div class="editor-titlebar">
+            <span class="dot bg-crimsonBright"></span><span class="dot bg-paper/30"></span><span class="dot bg-paper/30"></span>
+            <span class="ml-3 text-xs text-paper/40 font-mono">student.js</span>
+          </div>
+          <div class="editor-body font-mono text-sm leading-relaxed">
+<pre><code><span class="tok-key">const</span> <span class="tok-var">student</span> = {
+  <span class="tok-prop">name</span>: <span class="tok-str">"You"</span>,
+  <span class="tok-prop">learning</span>: <span class="tok-str">"Mi Coding School"</span>,
+  <span class="tok-prop">mode</span>: <span class="tok-str">"Live Online"</span>,
+  <span class="tok-prop">skills</span>: [<span class="tok-str">"HTML"</span>, <span class="tok-str">"CSS"</span>, <span class="tok-str">"JS..."</span>],
+};
+
+<span class="tok-fn">function</span> <span class="tok-var">buildFuture</span>(<span class="tok-var">student</span>) {
+  <span class="tok-key">return</span> <span class="tok-str">"<span id="heroTyping">career ready</span>"</span><span class="type-cursor">|</span>
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEW COURSE ANNOUNCEMENT ============ -->
+  <section class="max-w-7xl mx-auto px-5 md:px-8 -mt-6 md:-mt-10 relative z-10">
+    <div class="announce-banner" data-reveal="scale">
+      <div class="flex flex-wrap items-center gap-4">
+        <span class="pulse-badge">🔥 NEW COURSE</span>
+        <div>
+          <p class="font-display font-semibold text-xl">DevOps Engineering & Cloud Computing</p>
+          <p class="text-paper/60 text-sm font-mono">Admissions Open · Live Online Classes · Limited Seats Available</p>
+        </div>
+      </div>
+      <div class="flex gap-3 shrink-0">
+        <a href="#courses" class="btn-outline-sm">View Course <span class="btn-arrow">→</span></a>
+        <button data-open-register data-course="DevOps Engineering & Cloud Computing" class="btn-primary-sm">Register Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ONLINE LEARNING FEATURES ============ -->
+  <section class="max-w-7xl mx-auto px-5 md:px-8 py-28">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow"><span class="cursor-dot"></span>WHY ONLINE LEARNING</p>
+      <h2 class="section-title">Everything you need, without leaving home</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+      <div class="feature-card" data-reveal>
+        <div class="icon-badge">📡</div>
+        <h3 class="font-display font-semibold text-lg mt-4">Live Online Classes</h3>
+        <p class="text-paper/60 mt-2 text-sm">Attend interactive classes from anywhere with a real instructor, in real time.</p>
+      </div>
+      <div class="feature-card" data-reveal>
+        <div class="icon-badge">🏠</div>
+        <h3 class="font-display font-semibold text-lg mt-4">Learn From Home</h3>
+        <p class="text-paper/60 mt-2 text-sm">No commute, no travel — learn from the comfort of your own space.</p>
+      </div>
+      <div class="feature-card" data-reveal>
+        <div class="icon-badge">🛠️</div>
+        <h3 class="font-display font-semibold text-lg mt-4">Practical Projects</h3>
+        <p class="text-paper/60 mt-2 text-sm">Work on real-world projects and assignments that build your portfolio.</p>
+      </div>
+      <div class="feature-card" data-reveal>
+        <div class="icon-badge">🎓</div>
+        <h3 class="font-display font-semibold text-lg mt-4">Expert Faculty</h3>
+        <p class="text-paper/60 mt-2 text-sm">Learn from experienced instructors who work in the industry.</p>
+      </div>
+      <div class="feature-card" data-reveal>
+        <div class="icon-badge">⏱️</div>
+        <h3 class="font-display font-semibold text-lg mt-4">Flexible Learning</h3>
+        <p class="text-paper/60 mt-2 text-sm">Access resources and attend classes on a schedule that fits your life.</p>
+      </div>
+      <div class="feature-card" data-reveal>
+        <div class="icon-badge">💼</div>
+        <h3 class="font-display font-semibold text-lg mt-4">Career-Focused Skills</h3>
+        <p class="text-paper/60 mt-2 text-sm">Learn practical, in-demand skills relevant to today's tech industry.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+ 
+<section id="about" class="py-28 bg-panel border-y border-hair">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 grid lg:grid-cols-2 gap-16 items-center">
+    <div data-reveal="left">
+      <p class="eyebrow"><span class="cursor-dot"></span>ABOUT THE ACADEMY</p>
+      <h2 class="section-title">Quality tech education, accessible to everyone</h2>
+      <p class="mt-6 text-paper/70 leading-relaxed">
+        Mi Coding School is an online IT academy built for people who want to learn practical, job-ready technology skills without needing to relocate or attend a physical campus. We believe quality technology education should be accessible to everyone, regardless of location.
+      </p>
+      <p class="mt-4 text-paper/70 leading-relaxed">
+        Our mission is to turn beginners into confident builders through live instruction, real projects, and ongoing mentorship. Our vision is to become the most trusted online technology academy for career-focused learners.
+      </p>
+      <div class="grid grid-cols-2 gap-5 mt-8">
+        <div class="stat-box"><p class="font-display text-2xl font-semibold text-crimsonBright">Live</p><p class="text-xs text-paper/50 font-mono mt-1">Instructor-led classes</p></div>
+        <div class="stat-box"><p class="font-display text-2xl font-semibold text-crimsonBright">100%</p><p class="text-xs text-paper/50 font-mono mt-1">Online delivery</p></div>
+        <div class="stat-box"><p class="font-display text-2xl font-semibold text-crimsonBright">Project</p><p class="text-xs text-paper/50 font-mono mt-1">Based curriculum</p></div>
+        <div class="stat-box"><p class="font-display text-2xl font-semibold text-crimsonBright">Certified</p><p class="text-xs text-paper/50 font-mono mt-1">On completion</p></div>
+      </div>
+    </div>
+
+    <div class="relative" data-reveal="right">
+      <div class="relative rounded-2xl overflow-hidden border border-hair aspect-[4/5] bg-panel2 flex items-center justify-center p-8">
+
+        <!-- Faint logo watermark, sits behind everything, fills the box -->
+        <img src="images/logo.jpeg" alt="" aria-hidden="true"
+             class="absolute inset-0 w-full h-full object-cover opacity-[0.12]  pointer-events-none select-none z-0" />
+        <div class="absolute inset-0 bg-panel2/60 pointer-events-none z-0"></div>
+
+        <!-- Live badge -->
+        <div class="absolute top-5 right-5 flex items-center gap-2 bg-panel/80 border border-hair rounded-full px-3 py-1.5 z-10">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-crimsonBright opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-crimsonBright"></span>
+          </span>
+          <span class="text-xs font-mono text-paper/70">Live</span>
+        </div>
+
+        <!-- Terminal, smaller than the box so the watermark shows around it -->
+        <div class="relative w-full rounded-lg overflow-hidden border border-hair bg-black z-[1]">
+          <div class="flex gap-1.5 px-3.5 py-2.5 bg-panel">
+            <div class="w-2.5 h-2.5 rounded-full bg-crimsonBright"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-hair"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-hair"></div>
+          </div>
+          <div class="px-5 py-8 font-mono text-sm text-paper/90 h-[160px] overflow-hidden">
+            <span class="text-crimsonBright">$</span> <span id="mcsTyped"></span><span class="text-crimsonBright animate-pulse">|</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section> 
+  <!-- ============ WHY CHOOSE US ============ -->
+  <section class="max-w-7xl mx-auto px-5 md:px-8 py-28">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow"><span class="cursor-dot"></span>WHY CHOOSE US</p>
+      <h2 class="section-title">Built for outcomes, not just attendance</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
+      <div class="why-card" data-reveal><p class="font-display font-semibold">Experienced Instructors</p></div>
+      <div class="why-card" data-reveal><p class="font-display font-semibold">Live Online Classes</p></div>
+      <div class="why-card" data-reveal><p class="font-display font-semibold">Practical Learning</p></div>
+      <div class="why-card" data-reveal><p class="font-display font-semibold">Real Projects</p></div>
+      <div class="why-card" data-reveal><p class="font-display font-semibold">Student Support</p></div>
+      <div class="why-card" data-reveal><p class="font-display font-semibold">Career-Oriented Curriculum</p></div>
+      <div class="why-card" data-reveal><p class="font-display font-semibold">Certificates</p></div>
+      <div class="why-card" data-reveal><p class="font-display font-semibold">Affordable Learning</p></div>
+    </div>
+  </section>
+
+  <!-- ============ COURSES ============ -->
+  <section id="courses" class="py-28 bg-panel border-y border-hair">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow"><span class="cursor-dot"></span>ALL COURSES</p>
+        <h2 class="section-title">Pick a course, start building</h2>
+      </div>
+      <div id="coursesGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7 mt-12"></div>
+    </div>
+  </section>
+
+  <!-- ============ HOW ONLINE LEARNING WORKS ============ -->
+  <section class="max-w-7xl mx-auto px-5 md:px-8 py-28">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow"><span class="cursor-dot"></span>THE PROCESS</p>
+      <h2 class="section-title">How online learning works, step by step</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-12">
+      <div class="step-card" data-reveal><span class="step-num">01</span><h3 class="font-display font-semibold mt-3">Register</h3><p class="text-paper/60 text-sm mt-2">Choose your course and register online in minutes.</p></div>
+      <div class="step-card" data-reveal><span class="step-num">02</span><h3 class="font-display font-semibold mt-3">Join Classes</h3><p class="text-paper/60 text-sm mt-2">Attend live online classes with real instructors.</p></div>
+      <div class="step-card" data-reveal><span class="step-num">03</span><h3 class="font-display font-semibold mt-3">Practice</h3><p class="text-paper/60 text-sm mt-2">Complete assignments and hands-on exercises.</p></div>
+      <div class="step-card" data-reveal><span class="step-num">04</span><h3 class="font-display font-semibold mt-3">Build Projects</h3><p class="text-paper/60 text-sm mt-2">Create practical, portfolio-ready projects.</p></div>
+      <div class="step-card" data-reveal><span class="step-num">05</span><h3 class="font-display font-semibold mt-3">Grow</h3><p class="text-paper/60 text-sm mt-2">Build your skills, your portfolio and your career.</p></div>
+    </div>
+  </section>
+
+  <!-- ============ FACULTY ============ -->
+  <section id="faculty" class="py-28 bg-panel border-y border-hair">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow"><span class="cursor-dot"></span>OUR FACULTY</p>
+        <h2 class="section-title">Instructors who work in the field</h2>
+      </div>
+      <div id="facultyGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12"></div>
+    </div>
+  </section>
+
+  <!-- ============ STUDENT SUCCESS ============ -->
+  <!-- <section class="max-w-7xl mx-auto px-5 md:px-8 py-28">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow"><span class="cursor-dot"></span>STUDENT SUCCESS</p>
+      <h2 class="section-title">What students go on to do</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+      <div class="success-card" data-reveal><p class="font-display text-3xl font-semibold text-crimsonBright counter" data-count="850">0</p><p class="text-paper/60 text-sm mt-2">Courses Completed</p></div>
+      <div class="success-card" data-reveal><p class="font-display text-3xl font-semibold text-crimsonBright counter" data-count="600">0</p><p class="text-paper/60 text-sm mt-2">Projects Built</p></div>
+      <div class="success-card" data-reveal><p class="font-display text-3xl font-semibold text-crimsonBright counter" data-count="210">0</p><p class="text-paper/60 text-sm mt-2">Internships Started</p></div>
+      <div class="success-card" data-reveal><p class="font-display text-3xl font-semibold text-crimsonBright counter" data-count="140">0</p><p class="text-paper/60 text-sm mt-2">Jobs & Freelance Wins</p></div>
+    </div>
+  </section> -->
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section id="testimonials" class="py-28 bg-panel border-y border-hair overflow-hidden">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow"><span class="cursor-dot"></span>STUDENT REVIEWS</p>
+        <h2 class="section-title">Hear it from our students</h2>
+      </div>
+    </div>
+    <div class="max-w-3xl mx-auto px-5 md:px-8 mt-12 relative" data-reveal>
+      <div id="testimonialTrack" class="testimonial-card"></div>
+      <div class="flex justify-center gap-3 mt-6">
+        <button id="testPrev" class="carousel-btn" aria-label="Previous testimonial">←</button>
+        <div id="testDots" class="flex items-center gap-2"></div>
+        <button id="testNext" class="carousel-btn" aria-label="Next testimonial">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VIDEO FEEDBACK ============ -->
+  <section id="video-feedback" class="max-w-7xl mx-auto px-5 md:px-8 py-28">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow"><span class="cursor-dot"></span>VIDEO FEEDBACK</p>
+      <h2 class="section-title">Student Video Feedback</h2>
+    </div>
+    <div id="videoGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12"></div>
+  </section>
+
+  <!-- ============ CERTIFICATE ============ -->
+  <section class="py-28 bg-panel border-y border-hair">
+    <div class="max-w-5xl mx-auto px-5 md:px-8 text-center" data-reveal>
+      <p class="eyebrow justify-center"><span class="cursor-dot"></span>CERTIFICATION</p>
+      <h2 class="section-title">Learn. Complete. Get Certified.</h2>
+      <p class="text-paper/70 mt-4 max-w-xl mx-auto">Every student who successfully completes a course receives an official Mi Coding School certificate — recognizing the skills and projects you've completed.</p>
+      <div class="mt-10 certificate-mock mx-auto" data-reveal="scale">
+        <img src="images/logo.jpeg" alt="Mi Coding School" class="h-10 mx-auto mb-4 rounded">
+        <p class="font-display text-xl font-semibold">Certificate of Completion</p>
+        <p class="text-paper/50 text-sm font-mono mt-2">Awarded to — [Student Name]</p>
+        <p class="text-paper/40 text-xs font-mono mt-1">For successfully completing the program</p>
+      </div>
+      <a href="#courses" class="btn-primary mt-10 inline-block">Explore Courses <span class="btn-arrow">→</span></a>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="max-w-7xl mx-auto px-5 md:px-8 py-28">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow"><span class="cursor-dot"></span>GALLERY</p>
+      <h2 class="section-title">Moments from the academy</h2>
+    </div>
+    <div id="galleryGrid" class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12"></div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq" class="py-28 bg-panel border-y border-hair">
+    <div class="max-w-3xl mx-auto px-5 md:px-8">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow"><span class="cursor-dot"></span>FAQ</p>
+        <h2 class="section-title">Frequently asked questions</h2>
+      </div>
+      <div id="faqList" class="mt-12 flex flex-col gap-3"></div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="max-w-7xl mx-auto px-5 md:px-8 py-28">
+    <div class="section-head" data-reveal>
+      <p class="eyebrow"><span class="cursor-dot"></span>CONTACT US</p>
+      <h2 class="section-title">Let's talk about your course</h2>
+    </div>
+    <div class="grid lg:grid-cols-2 gap-12 mt-12">
+      <div class="flex flex-col gap-5" data-reveal>
+        <div class="contact-row"><span class="contact-icon">✉️</span><div><p class="text-sm text-paper/50 font-mono">Email</p><p id="contactEmail" class="font-medium"></p></div></div>
+        <div class="contact-row"><span class="contact-icon">💬</span><div><p class="text-sm text-paper/50 font-mono">WhatsApp</p><p id="contactWhatsapp" class="font-medium"></p></div></div>
+        <div class="contact-row"><span class="contact-icon">📞</span><div><p class="text-sm text-paper/50 font-mono">Phone</p><p id="contactPhone" class="font-medium"></p></div></div>
+        <div class="contact-row"><span class="contact-icon">🌐</span><div><p class="text-sm text-paper/50 font-mono">Online Support</p><p class="font-medium">Mon–Sat, 10am–8pm</p></div></div>
+      </div>
+      <form id="contactForm" class="flex flex-col gap-4" data-reveal novalidate>
+        <div>
+          <label for="cName" class="form-label">Name</label>
+          <input id="cName" name="name" type="text" class="form-input" required>
+          <p class="form-error" data-error-for="cName"></p>
+        </div>
+        <div>
+          <label for="cEmail" class="form-label">Email</label>
+          <input id="cEmail" name="email" type="email" class="form-input" required>
+          <p class="form-error" data-error-for="cEmail"></p>
+        </div>
+        <div>
+          <label for="cMessage" class="form-label">Message</label>
+          <textarea id="cMessage" name="message" rows="4" class="form-input" required></textarea>
+          <p class="form-error" data-error-for="cMessage"></p>
+        </div>
+        <button type="submit" class="btn-primary self-start">Send Message</button>
+        <p id="contactSuccess" class="hidden text-crimsonBright text-sm font-mono">Message sent — thank you! We'll get back to you shortly.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="border-t border-hair bg-panel" data-reveal>
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div>
+      <div class="flex items-center gap-3 mb-4">
+        <img src="images/logo.jpeg" alt="Mi Coding School logo" class="h-10 w-10 object-cover rounded-md">
+        <span class="font-display font-semibold">Mi Coding School</span>
+      </div>
+      <p class="text-paper/60 text-sm leading-relaxed">A live, online IT academy helping students build real technology skills — from anywhere.</p>
+      <div class="flex gap-3 mt-5" id="footerSocial"></div>
+    </div>
+    <div>
+      <p class="footer-heading">Quick Links</p>
+      <ul class="flex flex-col gap-2 text-sm text-paper/60">
+        <li><a href="#home" class="footer-link">Home</a></li>
+        <li><a href="#about" class="footer-link">About</a></li>
+        <li><a href="#courses" class="footer-link">Courses</a></li>
+        <li><a href="#faculty" class="footer-link">Faculty</a></li>
+        <li><a href="#testimonials" class="footer-link">Testimonials</a></li>
+        <li><a href="#faq" class="footer-link">FAQ</a></li>
+        <li><a href="#contact" class="footer-link">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-heading">Popular Courses</p>
+      <ul id="footerCourses" class="flex flex-col gap-2 text-sm text-paper/60"></ul>
+    </div>
+    <div>
+      <p class="footer-heading">Follow Us</p>
+      <ul class="flex flex-col gap-2 text-sm text-paper/60">
+        <li><a href="#" data-social="whatsapp" class="footer-link">WhatsApp</a></li>
+        <li><a href="#" data-social="facebook" class="footer-link">Facebook</a></li>
+        <li><a href="#" data-social="tiktok" class="footer-link">TikTok</a></li>
+        <li><a href="#" data-social="linkedin" class="footer-link">LinkedIn</a></li>
+        <li><a href="#" data-social="youtube" class="footer-link">YouTube</a></li>
+        <li><a href="#" data-social="instagram" class="footer-link">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-hair py-6 text-center text-xs text-paper/40 font-mono">
+    © 2026 Mi Coding School. All Rights Reserved.
+  </div>
+
+  <!-- Admin-only: export registrations (frontend-only demo storage) -->
+  <!-- <div class="text-center pb-6">
+    <button id="exportExcelBtn" class="text-xs font-mono text-paper/30 hover:text-crimsonBright underline underline-offset-4">Export Students to Excel (Admin)</button>
+  </div> -->
+</footer>
+
+<!-- ============ FLOATING WHATSAPP ============ -->
+<a id="floatingWhatsapp" href="#" target="_blank" rel="noopener" class="floating-whatsapp" aria-label="Chat with us on WhatsApp">
+  <span class="text-2xl">💬</span>
+</a>
+
+<!-- ============ REGISTRATION MODAL ============ -->
+<div id="registerModal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="registerTitle">
+  <div class="modal-box max-w-2xl">
+    <button class="modal-close" data-close-modal aria-label="Close registration form">✕</button>
+
+    <div id="registerFormView">
+      <h3 id="registerTitle" class="font-display text-2xl font-semibold">Student Registration</h3>
+      <p class="text-paper/60 text-sm mt-1">Fill in your details and our team will contact you shortly.</p>
+
+      <form id="registrationForm" class="grid sm:grid-cols-2 gap-4 mt-6" novalidate>
+        <div>
+          <label for="regName" class="form-label">Full Name *</label>
+          <input id="regName" name="fullName" type="text" class="form-input" required>
+          <p class="form-error" data-error-for="regName"></p>
+        </div>
+        <div>
+          <label for="regFather" class="form-label">Father's Name</label>
+          <input id="regFather" name="fatherName" type="text" class="form-input">
+        </div>
+        <div>
+          <label for="regEmail" class="form-label">Email *</label>
+          <input id="regEmail" name="email" type="email" class="form-input" required>
+          <p class="form-error" data-error-for="regEmail"></p>
+        </div>
+        <div>
+          <label for="regPhone" class="form-label">Phone Number *</label>
+          <input id="regPhone" name="phone" type="tel" class="form-input" required>
+          <p class="form-error" data-error-for="regPhone"></p>
+        </div>
+        <div>
+          <label for="regWhatsapp" class="form-label">WhatsApp Number *</label>
+          <input id="regWhatsapp" name="whatsapp" type="tel" class="form-input" required>
+          <p class="form-error" data-error-for="regWhatsapp"></p>
+        </div>
+        <div>
+          <label for="regCity" class="form-label">City</label>
+          <input id="regCity" name="city" type="text" class="form-input">
+        </div>
+        <div>
+          <label for="regAge" class="form-label">Age</label>
+          <input id="regAge" name="age" type="number" min="10" max="80" class="form-input">
+        </div>
+        <div>
+          <label for="regCourse" class="form-label">Select Course *</label>
+          <select id="regCourse" name="course" class="form-input" required>
+            <option value="">Choose a course</option>
+          </select>
+          <p class="form-error" data-error-for="regCourse"></p>
+        </div>
+        <div>
+          <label for="regEducation" class="form-label">Education</label>
+          <input id="regEducation" name="education" type="text" class="form-input" placeholder="e.g. Intermediate, Bachelor's">
+        </div>
+        <div>
+          <label for="regTiming" class="form-label">Preferred Class Timing *</label>
+          <select id="regTiming" name="timing" class="form-input" required>
+            <option value="">Choose timing</option>
+            <option>Morning</option>
+            <option>Evening</option>
+            <option>Weekend</option>
+          </select>
+          <p class="form-error" data-error-for="regTiming"></p>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="regSource" class="form-label">How did you hear about us?</label>
+          <select id="regSource" name="source" class="form-input">
+            <option value="">Select an option</option>
+            <option>Facebook</option>
+            <option>Instagram</option>
+            <option>TikTok</option>
+            <option>YouTube</option>
+            <option>Friend / Referral</option>
+            <option>Google Search</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="regMessage" class="form-label">Additional Message</label>
+          <textarea id="regMessage" name="message" rows="3" class="form-input"></textarea>
+        </div>
+
+        <div class="sm:col-span-2 mt-2">
+          <button type="submit" id="registerSubmitBtn" class="btn-primary w-full">Submit Registration</button>
+          <p id="registerFailMsg" class="hidden text-crimsonBright text-sm font-mono mt-3 text-center">Something went wrong — please try again or contact us through WhatsApp.</p>
+        </div>
+      </form>
+    </div>
+
+    <div id="registerSuccessView" class="hidden text-center py-8">
+      <div class="mb-4 flex items-center justify-center">
+        <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
+          <circle cx="36" cy="36" r="34" fill="rgba(34,197,94,0.12)" stroke="#22c55e" stroke-width="2"/>
+          <path d="M23 37.5L31.5 46L49 27" stroke="#22c55e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h3 class="font-display text-2xl font-semibold">Registration Successful</h3>
+      <p class="text-paper/60 mt-2">Thank you for registering with Mi Coding School.<br>Our team will contact you shortly.</p>
+      <!-- <p class="mt-6 font-mono text-sm text-paper/50">Registration ID</p> -->
+      <!-- <p id="registrationIdDisplay" class="font-display text-xl font-semibold text-crimsonBright"></p> -->
+      <button data-close-modal class="btn-primary mt-8">Done</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ VIDEO MODAL ============ -->
+<div id="videoModal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-label="Student video feedback">
+  <div class="modal-box max-w-3xl p-0 overflow-hidden">
+    <button class="modal-close z-10" data-close-modal aria-label="Close video">✕</button>
+    <div id="videoModalContent" class="aspect-video bg-black"></div>
+  </div>
+</div>
+
+<!-- ============ LIGHTBOX ============ -->
+<div id="lightbox" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-label="Gallery image">
+  <div class="relative max-w-4xl w-full">
+    <button class="modal-close" data-close-modal aria-label="Close image">✕</button>
+    <img id="lightboxImage" src="" alt="" class="w-full rounded-xl">
+    <p id="lightboxCaption" class="text-center text-paper/60 mt-3 text-sm"></p>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
